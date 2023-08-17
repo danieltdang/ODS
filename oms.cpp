@@ -1,7 +1,6 @@
 #include "OMS.h"
 #include "ui_OMS.h"
 #include "yolo.h"
-#include <QTimer>
 
 using namespace std;
 using namespace cv;
@@ -14,13 +13,11 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui.setupUi(this);
     index = 0;
-    //connect(ui.selectImg_Button, SIGNAL(clicked()), this, SLOT(DisplayImage()))
+    yolo = Yolo();
 }
 
 MainWindow::~MainWindow()
 {
-    delete sourceImg;
-	delete processedImg;
 }
 
 void MainWindow::updateSelectImg()
@@ -28,16 +25,12 @@ void MainWindow::updateSelectImg()
     // If files were selected
     if (!filePaths.isEmpty())
     {
-        sourceImg = new QGraphicsScene;
-
         QPixmap pic(filePaths[index]);
         QFileInfo info(filePaths[index]);
 
         ui.fileName->setText(QString::fromStdString("Source Image: ") + info.fileName());
 
-        sourceImg->addPixmap(filePaths[index]);
-        ui.imageView->setScene(sourceImg);
-        ui.imageView->fitInView(sourceImg->itemsBoundingRect(), KeepAspectRatio);
+        ui.imageView->setPixmap(pic.scaled(ui.imageView->width(), ui.imageView->height(), KeepAspectRatio));
     }
 }
 
@@ -46,11 +39,9 @@ void MainWindow::updateProcessedImg()
     // If files were selected
     if (!filePaths.isEmpty())
     {
-        processedImg = new QGraphicsScene;
+        QPixmap pic(yolo.ProcessImage(filePaths[index].toStdString(), ui.fileName_2));
 
-        processedImg->addPixmap(yolo.ProcessImage(filePaths[index].toStdString(), ui.fileName_2));
-        ui.imageView_2->setScene(processedImg);
-        ui.imageView_2->fitInView(processedImg->itemsBoundingRect(), KeepAspectRatio);
+        ui.imageView_2->setPixmap(pic.scaled(ui.imageView->width(), ui.imageView->height(), KeepAspectRatio));
     }
 }
 
@@ -70,9 +61,6 @@ void MainWindow::on_back_Button_clicked()
 {
     if (index > 0)
     {
-        delete sourceImg;
-        delete processedImg;
-
         index--;
         updateSelectImg();
         updateProcessedImg();
@@ -83,9 +71,6 @@ void MainWindow::on_next_Button_clicked()
 {
     if (index < filePaths.size())
     {
-        delete sourceImg;
-        delete processedImg;
-
         index++;
         updateSelectImg();
         updateProcessedImg();

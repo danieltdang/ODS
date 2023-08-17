@@ -27,7 +27,6 @@ public:
 	Yolo();
 
 	void LoadCategories();
-	void LoadImages();
 	void ReadModel();
 	void DrawLabel(Mat& input_image, string label, Scalar color, int left, int top);
 	vector<Mat> pre_process(Mat& input_image);

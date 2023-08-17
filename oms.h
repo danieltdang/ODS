@@ -44,9 +44,5 @@ private:
 
     Yolo yolo;
 
-    QGraphicsScene* sourceImg;
-    QGraphicsScene* processedImg;
-
     QStringList filePaths;
-    vector<QGraphicsScene*> processedImgs;
 };

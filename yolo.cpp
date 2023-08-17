@@ -22,7 +22,6 @@ Yolo::Yolo()
 	MODEL_DIR = "models/yolov5l6.onnx";
 
 	LoadCategories();
-	LoadImages();
 	ReadModel();
 }
 
@@ -46,22 +45,6 @@ void Yolo::LoadCategories()
 	catch (const exception& ex)
 	{
 		cout << "[LOAD_CATEGORY_ERROR] " << ex.what() << endl;
-	}
-}
-
-void Yolo::LoadImages()
-{
-	try
-	{
-		for (const auto& entry : fs::directory_iterator(IMG_DIR))
-		{
-			imagePaths.push_back(entry.path().string());
-		}
-		cout << "[SYSTEM] Loaded " + to_string(imagePaths.size()) + " images.\n";
-	}
-	catch (const exception& ex)
-	{
-		cout << "[LOAD_IMAGE_ERROR] " << ex.what() << endl;
 	}
 }
 

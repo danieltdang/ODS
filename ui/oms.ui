@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
+    <width>1290</width>
     <height>750</height>
    </rect>
   </property>
@@ -14,16 +14,6 @@
    <string>Object Management System</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QGraphicsView" name="imageView">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>160</y>
-      <width>631</width>
-      <height>441</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="selectImg_Button">
     <property name="geometry">
      <rect>
@@ -76,16 +66,6 @@
      <string>Processed Image:</string>
     </property>
    </widget>
-   <widget class="QGraphicsView" name="imageView_2">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>160</y>
-      <width>611</width>
-      <height>441</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="back_Button">
     <property name="geometry">
      <rect>
@@ -121,13 +101,51 @@
      <string>Next</string>
     </property>
    </widget>
+   <widget class="QLabel" name="imageView">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>630</width>
+      <height>440</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-color: gray;
+border-width: 1px;
+border-style: solid;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imageView_2">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>160</y>
+      <width>630</width>
+      <height>440</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-color: gray;
+border-width: 1px;
+border-style: solid;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1280</width>
+     <width>1290</width>
      <height>22</height>
     </rect>
    </property>
