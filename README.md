@@ -1,5 +1,5 @@
 # Object Management System (OMS)
-Utilizes [OpenCV 4.8.0](https://github.com/opencv/opencv/releases/tag/4.8.0), in combination with the vision AI model [YOLOv5](https://github.com/ultralytics/yolov5) to process images to identify and categorize products in an inventory. Store product details, quantities, and images in a [MySQL](https://github.com/mysql/mysql-server) database to track inventory levels and facilitate restocking.
+Utilizes [OpenCV 4.8.0](https://github.com/opencv/opencv/releases/tag/4.8.0), in combination with the vision AI model [YOLOv5](https://github.com/ultralytics/yolov5) to process images to identify and categorize products in an inventory. Store product details, quantities, and images in a [MySQL](https://github.com/mysql/mysql-server) database to track inventory levels and facilitate restocking. Uses [Qt](https://www.qt.io/) as the GUI framework for user-friendly interaction with the application.
 ## Overview
 
 Create an inventory management system using C++, OpenCV, and MySQL database integration. This application will use image processing to identify and categorize products within an inventory, while storing essential product details, quantities, and images in an SQL database. This system will enable efficient inventory tracking and streamline restocking processes.
@@ -25,7 +25,7 @@ Create an inventory management system using C++, OpenCV, and MySQL database inte
    - Manage image paths, ensuring consistency in storage and retrieval.
 
 5. **User Interface:**
-   - Create a user interface using a command-line interface (CLI) for interaction.
+   - Create a user interface using a Qt as a GUI for interaction.
 
 6. **Image Capture (Optional):**
    - Integrate camera modules or webcams to capture product images directly into the application.
@@ -53,4 +53,4 @@ Create an inventory management system using C++, OpenCV, and MySQL database inte
 - **Programming Language:** C++
 - **Image Processing:** OpenCV
 - **Database:** MySQL
-- **User Interface:** Command-line Interface (CLI)
+- **User Interface:** Qt
