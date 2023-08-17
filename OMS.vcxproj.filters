@@ -27,11 +27,11 @@
     <Filter Include="Resource Files\models">
       <UniqueIdentifier>{ddfbf32a-7e87-4be5-aef7-e2662c727992}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\ui">
+      <UniqueIdentifier>{c15dae93-161f-4397-88cb-b26594cebacf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="oms.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
     <QtUic Include="oms.ui">
       <Filter>Form Files</Filter>
     </QtUic>
@@ -41,12 +41,6 @@
     <ClCompile Include="oms.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <None Include="oms.ico">
-      <Filter>Resource Files</Filter>
-    </None>
-    <ResourceCompile Include="oms.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="models\coco.txt">
@@ -77,6 +71,9 @@
     <Image Include="images\test_5.jpg">
       <Filter>Resource Files\images</Filter>
     </Image>
+    <Image Include="ui\oms.ico">
+      <Filter>Resource Files\ui</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -90,5 +87,15 @@
     <ClInclude Include="yolo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="ui\oms.qrc">
+      <Filter>Resource Files\ui</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ui\oms.rc">
+      <Filter>Resource Files\ui</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

@@ -108,7 +108,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="yolo.cpp" />
-    <QtRcc Include="oms.qrc" />
     <QtUic Include="oms.ui" />
     <QtMoc Include="oms.h" />
     <ClCompile Include="oms.cpp" />
@@ -119,8 +118,6 @@
       <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).moc</QtMocFileName>
     </ClCompile>
     <None Include="models\yolov5l6.onnx" />
-    <None Include="oms.ico" />
-    <ResourceCompile Include="oms.rc" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="models\coco.txt" />
@@ -132,9 +129,16 @@
     <Image Include="images\test_3.jpg" />
     <Image Include="images\test_4.jpg" />
     <Image Include="images\test_5.jpg" />
+    <Image Include="ui\oms.ico" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="yolo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="ui\oms.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ui\oms.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
