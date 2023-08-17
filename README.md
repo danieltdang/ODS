@@ -51,6 +51,6 @@ Create an inventory management system using C++, OpenCV, and MySQL database inte
 ## Tech Stack
 
 - **Programming Language:** C++
-- **Image Processing:** OpenCV
+- **Image Processing:** OpenCV, YOLOv5
 - **Database:** MySQL
 - **User Interface:** Qt
