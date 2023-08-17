@@ -108,7 +108,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="yolo.cpp" />
-    <QtUic Include="oms.ui" />
     <QtMoc Include="oms.h" />
     <ClCompile Include="oms.cpp" />
     <ClCompile Include="main.cpp">
@@ -139,6 +138,9 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ui\oms.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="ui\oms.ui" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

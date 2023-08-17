@@ -32,9 +32,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="oms.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
     <QtMoc Include="oms.h">
       <Filter>Header Files</Filter>
     </QtMoc>
@@ -97,5 +94,10 @@
     <ResourceCompile Include="ui\oms.rc">
       <Filter>Resource Files\ui</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="ui\oms.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
 </Project>
