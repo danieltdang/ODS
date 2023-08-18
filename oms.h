@@ -32,6 +32,7 @@ public:
 private slots:
     void updateSelectImg();
     void updateProcessedImg();
+    void updateButtonStates();
     void on_selectImg_Button_clicked();
     void on_processImg_Button_clicked();
     void on_back_Button_clicked();
@@ -41,7 +42,7 @@ private:
     Ui::OMSClass ui;
 
     QStringList filePaths;
-    vector<QPixmap> processedImages;
+    vector<pair<QPixmap, QPixmap>> images;
 
     int index;
 

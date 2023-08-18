@@ -17,10 +17,10 @@
    <widget class="QPushButton" name="selectImg_Button">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>50</y>
-      <width>91</width>
-      <height>24</height>
+      <x>570</x>
+      <y>70</y>
+      <width>150</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
@@ -30,10 +30,10 @@
    <widget class="QPushButton" name="processImg_Button">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>50</y>
-      <width>75</width>
-      <height>24</height>
+      <x>595</x>
+      <y>100</y>
+      <width>100</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
@@ -69,10 +69,10 @@
    <widget class="QPushButton" name="back_Button">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>610</y>
-      <width>75</width>
-      <height>24</height>
+      <x>542</x>
+      <y>645</y>
+      <width>100</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
@@ -91,10 +91,10 @@
    <widget class="QPushButton" name="next_Button">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>610</y>
-      <width>75</width>
-      <height>24</height>
+      <x>649</x>
+      <y>645</y>
+      <width>100</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
@@ -107,14 +107,12 @@
       <x>10</x>
       <y>160</y>
       <width>630</width>
-      <height>440</height>
+      <height>480</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-border-color: gray;
-border-width: 1px;
-border-style: solid;</string>
+     <string notr="true">background-color: rgb(240, 240, 240);
+border: 1px solid gray;</string>
     </property>
     <property name="text">
      <string/>
@@ -126,14 +124,12 @@ border-style: solid;</string>
       <x>650</x>
       <y>160</y>
       <width>630</width>
-      <height>440</height>
+      <height>480</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-border-color: gray;
-border-width: 1px;
-border-style: solid;</string>
+     <string notr="true">background-color: rgb(240, 240, 240);
+border: 1px solid gray;</string>
     </property>
     <property name="text">
      <string/>
