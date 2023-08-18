@@ -94,7 +94,7 @@ void Yolo::DrawLabel(Mat& input_image, string label, Scalar color, int left, int
 	}
 }
 
-vector<Mat> Yolo::pre_process(Mat& input_image)
+vector<Mat> Yolo::PreProcess(Mat& input_image)
 {
 	try
 	{
@@ -119,7 +119,7 @@ vector<Mat> Yolo::pre_process(Mat& input_image)
 	return vector<Mat>();
 }
 
-Mat Yolo::post_process(Mat& input_image, vector<Mat>& detections)
+Mat Yolo::PostProcess(Mat& input_image, vector<Mat>& detections)
 {
 	try
 	{
@@ -251,8 +251,8 @@ QPixmap Yolo::ProcessImage(const string& path, QLabel* processedTime)
 
 		// Process the image
 		vector<Mat> detections;
-		detections = pre_process(resizedImg);
-		Mat img = post_process(resizedImg, detections);
+		detections = PreProcess(resizedImg);
+		Mat img = PostProcess(resizedImg, detections);
 
 		// Label image with processing time
 		vector<double> layersTimes;

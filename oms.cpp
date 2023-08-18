@@ -1,6 +1,9 @@
 #include "OMS.h"
 #include "ui_OMS.h"
 #include "yolo.h"
+#ifndef LIST_H
+#include "list.h"
+#endif
 
 using namespace std;
 using namespace cv;
@@ -9,11 +12,10 @@ using namespace cuda;
 using namespace Qt;
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
+    : QMainWindow(parent), yolo()
 {
     ui.setupUi(this);
     index = 0;
-    yolo = Yolo();
 }
 
 MainWindow::~MainWindow()
@@ -28,7 +30,7 @@ void MainWindow::updateSelectImg()
         QPixmap pic(filePaths[index]);
         QFileInfo info(filePaths[index]);
 
-        ui.fileName->setText(QString::fromStdString("Source Image: ") + info.fileName());
+        ui.fileName->setText(QString::fromStdString("Source Image: ") + info.filePath());
 
         ui.imageView->setPixmap(pic.scaled(ui.imageView->width(), ui.imageView->height(), KeepAspectRatio));
     }

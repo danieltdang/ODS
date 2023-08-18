@@ -29,8 +29,8 @@ public:
 	void LoadCategories();
 	void ReadModel();
 	void DrawLabel(Mat& input_image, string label, Scalar color, int left, int top);
-	vector<Mat> pre_process(Mat& input_image);
-	Mat post_process(Mat& input_image, vector<Mat>& detections);
+	vector<Mat> PreProcess(Mat& input_image);
+	Mat PostProcess(Mat& input_image, vector<Mat>& detections);
 
 	QPixmap ProcessImage(const string& imagePath, QLabel* processedTime);
 private:

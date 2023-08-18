@@ -16,6 +16,10 @@
 #include <vector>
 #include <filesystem>
 
+#ifndef LIST_H
+#include "list.h"
+#endif
+
 using namespace std;
 using namespace cv;
 using namespace dnn;
@@ -40,9 +44,10 @@ private slots:
 private:
     Ui::OMSClass ui;
 
+    QStringList filePaths;
+    vector<QPixmap> processedImages;
+
     int index;
 
     Yolo yolo;
-
-    QStringList filePaths;
 };
