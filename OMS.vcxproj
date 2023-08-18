@@ -131,8 +131,6 @@
     <Image Include="ui\oms.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="list.h" />
-    <ClInclude Include="list.hpp" />
     <ClInclude Include="yolo.h" />
   </ItemGroup>
   <ItemGroup>

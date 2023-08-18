@@ -16,10 +16,6 @@
 #include <vector>
 #include <filesystem>
 
-#ifndef LIST_H
-#include "list.h"
-#endif
-
 using namespace std;
 using namespace cv;
 using namespace dnn;
