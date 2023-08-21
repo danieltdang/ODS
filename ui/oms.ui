@@ -27,19 +27,6 @@
      <string>Select Image(s)</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="processImg_Button">
-    <property name="geometry">
-     <rect>
-      <x>595</x>
-      <y>60</y>
-      <width>100</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Re-Process</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="fileName">
     <property name="geometry">
      <rect>
@@ -133,19 +120,6 @@ border: 1px solid gray;</string>
     </property>
     <property name="text">
      <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="processImg_Button_2">
-    <property name="geometry">
-     <rect>
-      <x>595</x>
-      <y>90</y>
-      <width>100</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Re-Process All</string>
     </property>
    </widget>
   </widget>

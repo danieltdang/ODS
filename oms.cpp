@@ -91,11 +91,6 @@ void MainWindow::on_selectImg_Button_clicked()
     updateButtonStates();
 }
 
-void MainWindow::on_processImg_Button_clicked()
-{
-    updateProcessedImg();
-}
-
 void MainWindow::on_back_Button_clicked()
 {
     if (index > 0)
