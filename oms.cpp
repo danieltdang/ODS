@@ -27,6 +27,7 @@ void MainWindow::updateSelectImg()
     if (index >= images.size())
     {
         images.push_back({ QPixmap(), QPixmap() });
+        processingTime.push_back("");
     }
 
     // If the selected image has not been loaded yet
@@ -56,18 +57,23 @@ void MainWindow::updateSelectImg()
 void MainWindow::updateProcessedImg()
 {
     QPixmap pic;
-    // If files were selected
+    // If the processed image has not been loaded yet
     if (images[index].second.isNull())
     {
-        pic = (yolo.ProcessImage(filePaths[index].toStdString(), ui.fileName_2));
+        string time;
+        pic = (yolo.ProcessImage(filePaths[index].toStdString(), time));
         images[index].second = pic;
+        processingTime[index] = time;
     }
+    // If the processed image has been loaded
     else
     {
         pic = images[index].second;
     }
 
+    // Update the image view
     ui.imageView_2->setPixmap(pic.scaled(ui.imageView->width(), ui.imageView->height(), KeepAspectRatio));
+    ui.fileName_2->setText(QString::fromStdString("Processed Image: ") + QString::fromStdString(processingTime[index]));
 }
 
 void MainWindow::updateButtonStates()

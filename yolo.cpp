@@ -235,7 +235,7 @@ Mat Yolo::PostProcess(Mat& input_image, vector<Mat>& detections)
 	return input_image;
 }
 
-QPixmap Yolo::ProcessImage(const string& path, QLabel* processedTime)
+QPixmap Yolo::ProcessImage(const string& path, string& processedTime)
 {
 	QPixmap pix;
 	try
@@ -258,10 +258,10 @@ QPixmap Yolo::ProcessImage(const string& path, QLabel* processedTime)
 		vector<double> layersTimes;
 		double freq = getTickFrequency() / 1000;
 		double ms = net.getPerfProfile(layersTimes) / freq;
-		string label = format("Processing time: %.2f ms", ms);
-		processedTime->setText("Processed Image: ");// +QString::fromStdString(format("%.2f ms", ms)));
-		putText(resizedImg, label, Point(10, 30), FONT_FACE, FONT_SCALE, Scalar(0, 0, 0), THICKNESS + 1, LINE_AA);
-		putText(resizedImg, label, Point(10, 30), FONT_FACE, FONT_SCALE, Scalar(255, 255, 255), THICKNESS, LINE_AA);
+		//string label = format("Processing time: %.2f ms", ms);
+		processedTime = format("%.2f ms", ms);
+		//putText(resizedImg, label, Point(10, 30), FONT_FACE, FONT_SCALE, Scalar(0, 0, 0), THICKNESS + 1, LINE_AA);
+		//putText(resizedImg, label, Point(10, 30), FONT_FACE, FONT_SCALE, Scalar(255, 255, 255), THICKNESS, LINE_AA);
 		cvtColor(resizedImg, resizedImg, COLOR_BGR2RGB);
 		pix = QPixmap::fromImage(QImage(resizedImg.data, resizedImg.cols, resizedImg.rows, resizedImg.step, QImage::Format_RGB888));
 	}

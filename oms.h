@@ -43,7 +43,7 @@ private:
 
     QStringList filePaths;
     vector<pair<QPixmap, QPixmap>> images;
-
+    vector<string> processingTime;
     int index;
 
     Yolo yolo;

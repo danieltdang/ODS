@@ -32,7 +32,7 @@ public:
 	vector<Mat> PreProcess(Mat& input_image);
 	Mat PostProcess(Mat& input_image, vector<Mat>& detections);
 
-	QPixmap ProcessImage(const string& imagePath, QLabel* processedTime);
+	QPixmap ProcessImage(const string& imagePath, string& processedTime);
 private:
 	// Categories with Colors
 	vector<pair<string, Scalar>> colors;
