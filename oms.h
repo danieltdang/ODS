@@ -34,7 +34,6 @@ private slots:
     void updateProcessedImg();
     void updateButtonStates();
     void on_selectImg_Button_clicked();
-    void on_processImg_Button_clicked();
     void on_back_Button_clicked();
     void on_next_Button_clicked();
 
