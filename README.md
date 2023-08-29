@@ -1,4 +1,4 @@
-# Object Management System (OMS)
+# Object Detection System (ODS)
 Utilizes [OpenCV 4.8.0](https://github.com/opencv/opencv/releases/tag/4.8.0), in combination with the vision AI model [YOLOv5](https://github.com/ultralytics/yolov5) to process images to identify and categorize products in an inventory. Store product details, quantities, and images in a [MySQL](https://github.com/mysql/mysql-server) database to track inventory levels and facilitate restocking. Uses [Qt](https://www.qt.io/) as the GUI framework for user-friendly interaction with the application.
 ## Overview
 
