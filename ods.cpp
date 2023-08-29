@@ -1,5 +1,5 @@
-#include "OMS.h"
-#include "ui_OMS.h"
+#include "ods.h"
+#include "ui_ODS.h"
 #include "yolo.h"
 
 using namespace std;

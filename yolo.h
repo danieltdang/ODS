@@ -3,7 +3,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QFileDialog>
 #include <QPixmap>
-#include "ui_OMS.h"
+#include "ui_ODS.h"
 #include <iostream>
 #include <fstream>
 #include <map>

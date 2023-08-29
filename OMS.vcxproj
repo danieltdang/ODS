@@ -108,8 +108,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="yolo.cpp" />
-    <QtMoc Include="oms.h" />
-    <ClCompile Include="oms.cpp" />
+    <QtMoc Include="ods.h" />
+    <ClCompile Include="ods.cpp" />
     <ClCompile Include="main.cpp">
       <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
       <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).moc</QtMocFileName>
@@ -128,19 +128,19 @@
     <Image Include="images\test_3.jpg" />
     <Image Include="images\test_4.jpg" />
     <Image Include="images\test_5.jpg" />
-    <Image Include="ui\oms.ico" />
+    <Image Include="ui\ods.ico" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="yolo.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="ui\oms.qrc" />
+    <QtRcc Include="ui\ods.qrc" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="ui\oms.rc" />
+    <ResourceCompile Include="ui\ods.rc" />
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="ui\oms.ui" />
+    <QtUic Include="ui\ods.ui" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

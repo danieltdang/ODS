@@ -32,10 +32,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="oms.h">
+    <QtMoc Include="ods.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <ClCompile Include="oms.cpp">
+    <ClCompile Include="ods.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -68,7 +68,7 @@
     <Image Include="images\test_5.jpg">
       <Filter>Resource Files\images</Filter>
     </Image>
-    <Image Include="ui\oms.ico">
+    <Image Include="ui\ods.ico">
       <Filter>Resource Files\ui</Filter>
     </Image>
   </ItemGroup>
@@ -86,17 +86,17 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="ui\oms.qrc">
+    <QtRcc Include="ui\ods.qrc">
       <Filter>Resource Files\ui</Filter>
     </QtRcc>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="ui\oms.rc">
+    <ResourceCompile Include="ui\ods.rc">
       <Filter>Resource Files\ui</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="ui\oms.ui">
+    <QtUic Include="ui\ods.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
